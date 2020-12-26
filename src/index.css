@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow:400,700,900&display=swap");
+
+.swiper-container {
+  position: relative;
+  height: 85vh;
+}
+
+.swiper-slide {
+  padding-left: 15%;
+}
+
+.parallax-bg {
+  background-image: url("images/background.jpg");
+}
+
+.swiper-container-vertical .swiper-pagination-bullets {
+  left: 5%;
+  top: 25%;
+}
