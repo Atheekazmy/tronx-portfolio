@@ -30,6 +30,11 @@ const useStyles = makeStyles((theme) => ({
   },
   swiper: {
     height: '85vh'
+  },
+
+  anchorBackground: {
+    background: theme.palette.secondary.main
+
   }
 }))
 

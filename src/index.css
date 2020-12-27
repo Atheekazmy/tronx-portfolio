@@ -17,3 +17,11 @@
   left: 5%;
   top: 25%;
 }
+
+.swiper-pagination {
+  font-family: Raleway;
+  padding: 1em 1em;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}

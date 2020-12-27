@@ -8,6 +8,7 @@ import 'swiper/css/swiper.css';// scss
 import 'swiper/swiper.scss';// less
 import 'swiper/swiper.less';
 import './index.css';
+import './animate.css';
 
 ReactDOM.render(
   <CustomThemeProvider>
