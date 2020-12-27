@@ -1,6 +1,7 @@
 import { Typography } from '@material-ui/core';
 import React, { useRef } from 'react';
 import Swiper from 'react-id-swiper';
+import HomeContent from './Home/HomeContent';
 
 export const VerticalSlider = ({ classes }) => {
     const menuName = ['Home', 'Services', 'Resume', 'Projects', 'Blogs', 'Contact'];
@@ -41,36 +42,10 @@ export const VerticalSlider = ({ classes }) => {
             </div> */}
             <Swiper {...params} className={classes.swiper} ref={swiperRef} >
                 <div >
-                    <div data-swiper-parallax="-300">
-                        Slide #2
-                     </div>
-                    <div data-swiper-parallax="-200">
-                        Subtitle
-                    </div>
-                    <div data-swiper-parallax="-100">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.Aliquam dictum mattis velit, sit
-                            amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor.
-                            Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh
-                            euismod.
-                        </p>
-                    </div>
+                <HomeContent />
                 </div>
                 <div styles={{ marginLeft: '30%' }}>
-                    <div data-swiper-parallax="-300">
-                        Slide #2
-                    </div>
-                    <div data-swiper-parallax="-200">
-                        Subtitle
-                    </div>
-                    <div data-swiper-parallax="-100">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.Aliquam dictum mattis velit, sit
-                            amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor.
-                            Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh
-                            euismod.
-                        </p>
-                    </div>
+                <HomeContent />
                 </div>
                 <div >
                     <div data-swiper-parallax="-300">
