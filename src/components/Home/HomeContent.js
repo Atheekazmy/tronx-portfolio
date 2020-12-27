@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography, Avatar, Card } from "@material-ui/core";
+import { Grid, Typography, Avatar, Card, CardMedia } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
 
@@ -28,25 +28,32 @@ const useStyles = makeStyles((theme) => ({
 const HomeContent = () => {
   const classes = useStyles();
   return (
-    <Grid container spacing={3}>
-      <Grid item xs={3}>
-        <GridItemWithSwiper xs={12} swiperParallax="-100">
-          <Typography variant="h3" gutterBottom>
-            Hi! I'm Nigga
-          </Typography>
-          <Typography variant="h6" gutterBottom>
-            Hi! I'm Nigga
-          </Typography>
-        </GridItemWithSwiper>
-        <GridItemWithSwiper xs={12} swiperParallax="-300">
-          <img
-            src={
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqnePyQ74Es_GIewC2v2Q-mY3oiBjJ8c1xPg&usqp=CAU"
-            }
-          />
-        </GridItemWithSwiper>
+    <Grid container spacing={1}>
+      <Grid item lg={3} sm={12} xl={3} xs={12}>
+        <Grid container spacing={3}>
+          <GridItemWithSwiper xs={12} swiperParallax="-100">
+            <Typography variant="h3" gutterBottom>
+              Hi! I'm Nigga
+            </Typography>
+            <Typography variant="h6" gutterBottom>
+              Hi! I'm Nigga
+            </Typography>
+          </GridItemWithSwiper>
+          <GridItemWithSwiper xs={12} swiperParallax="-300">
+            {/* <img
+              src={
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqnePyQ74Es_GIewC2v2Q-mY3oiBjJ8c1xPg&usqp=CAU"
+              }
+            /> */}
+            <CardMedia
+              image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqnePyQ74Es_GIewC2v2Q-mY3oiBjJ8c1xPg&usqp=CAU"
+              title="Paella dish"
+              style={{ height: 500, width: 350 }}
+            />
+          </GridItemWithSwiper>
+        </Grid>
       </Grid>
-      <Grid item xs={7}>
+      <Grid item lg={9} sm={12} xl={9} xs={12}>
         <Grid container spacing={3}>
           <GridItemWithSwiper xs={12} swiperParallax="-100">
             <p>
@@ -56,15 +63,15 @@ const HomeContent = () => {
               Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
             </p>
           </GridItemWithSwiper>
-          <GridItemWithSwiper xs={12} swiperParallax="-300">
+          <GridItemWithSwiper xs={6} swiperParallax="-300">
             <SocialIcons />
           </GridItemWithSwiper>
           <Grid item xs={12}>
             <Grid container>
-              <GridItemWithSwiper xs={3} swiperParallax="-500">
+              <GridItemWithSwiper xs={2} swiperParallax="-500">
                 <OutlinedButtons color="primary" label="CHECKOUT MY RESUME" />
               </GridItemWithSwiper>
-              <GridItemWithSwiper xs={3} swiperParallax="-500">
+              <GridItemWithSwiper xs={2} swiperParallax="-500">
                 <OutlinedButtons color="primary" label="CONTACT ME" />
               </GridItemWithSwiper>
             </Grid>
