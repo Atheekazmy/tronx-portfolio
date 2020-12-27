@@ -1,13 +1,10 @@
 import React, { useContext } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import SwitchUI from '@material-ui/core/Switch'
-import Typography from '@material-ui/core/Typography'
-import { CustomThemeContext } from './themes/CustomThemeProvider'
 import { VerticalSlider } from './components/verticalslider'
-import { Parallax } from './components/parallexSlider'
+import { CustomThemeContext } from './themes/customThemeProvider'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -33,7 +30,26 @@ const useStyles = makeStyles((theme) => ({
   },
 
   anchorBackground: {
-    background: theme.palette.secondary.main
+    "&:before": {
+      position: "absolute",
+      content: '""',
+      top: 0,
+      left: 0,
+      right: 0,
+      width: "30%",
+      height: 2,
+      background: "red"
+    },
+    "&:after": {
+      position: "absolute",
+      content: '""',
+      top: 100,
+      left: 0,
+      right: 0,
+      width: "30%",
+      height: 2,
+      background: "red"
+    }
 
   }
 }))

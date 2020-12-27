@@ -10,7 +10,7 @@ export const CustomThemeContext = React.createContext(
   },
 )
 
-const CustomThemeProvider = (props) => {
+export const CustomThemeProvider = (props) => {
   // eslint-disable-next-line react/prop-types
   const { children } = props
 
@@ -41,4 +41,3 @@ const CustomThemeProvider = (props) => {
   )
 }
 
-export default CustomThemeProvider
