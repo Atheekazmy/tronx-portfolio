@@ -25,33 +25,7 @@ const useStyles = makeStyles((theme) => ({
     top: '2%',
     right: '5%'
   },
-  swiper: {
-    height: '85vh'
-  },
 
-  anchorBackground: {
-    "&:before": {
-      position: "absolute",
-      content: '""',
-      top: 0,
-      left: 0,
-      right: 0,
-      width: "30%",
-      height: 2,
-      background: "red"
-    },
-    "&:after": {
-      position: "absolute",
-      content: '""',
-      top: 100,
-      left: 0,
-      right: 0,
-      width: "30%",
-      height: 2,
-      background: "red"
-    }
-
-  }
 }))
 
 export default function App() {
