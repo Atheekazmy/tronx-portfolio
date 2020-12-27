@@ -8,30 +8,30 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 
 const SocialIcons = (props) => {
   return (
-    <Grid container spacing={3}>
+    <Grid container spacing={1}>
       <Grid item xs={1}>
         <Avatar>
-          <FacebookIcon fontSize="large" />
+          <FacebookIcon fontSize="large" color={"primary"} />
         </Avatar>
       </Grid>
       <Grid item xs={1}>
         <Avatar>
-          <InstagramIcon fontSize="large" />
+          <InstagramIcon fontSize="large" color={"primary"} />
         </Avatar>
       </Grid>
       <Grid item xs={1}>
         <Avatar>
-          <TwitterIcon fontSize="large" />
+          <TwitterIcon fontSize="large" color={"primary"} />
         </Avatar>
       </Grid>
       <Grid item xs={1}>
         <Avatar>
-          <LinkedInIcon fontSize="large" />
+          <LinkedInIcon fontSize="large" color={"primary"} />
         </Avatar>
       </Grid>
       <Grid item xs={1}>
         <Avatar>
-          <GitHubIcon fontSize="large" />
+          <GitHubIcon fontSize="large" color={"primary"} />
         </Avatar>
       </Grid>
     </Grid>
