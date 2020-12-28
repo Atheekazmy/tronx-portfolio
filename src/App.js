@@ -1,10 +1,11 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Toolbar from '@material-ui/core/Toolbar'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import SwitchUI from '@material-ui/core/Switch'
 import { VerticalSlider } from './components/verticalslider'
 import { CustomThemeContext } from './themes/customThemeProvider'
+import { NavigationMenu } from './components/navigationMenu'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -30,6 +31,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function App() {
   const classes = useStyles()
+  const swiperRef = useRef();
+
   const { currentTheme, setTheme } = useContext(CustomThemeContext)
   const isDark = Boolean(currentTheme === 'dark')
 
@@ -42,6 +45,10 @@ export default function App() {
     }
   }
 
+  const onSliderChange = (index) => {
+    swiperRef.current && swiperRef.current.changeSlider(index);
+  }
+
   return (
     <div className={classes.root}>
       <FormControlLabel className={classes.themeSwitch}
@@ -50,7 +57,8 @@ export default function App() {
       />
       <main className={classes.content}>
         <Toolbar />
-        <VerticalSlider classes={classes} />
+        <NavigationMenu onChange={onSliderChange} />
+        <VerticalSlider classes={classes} ref={swiperRef} />
       </main>
     </div>
   )

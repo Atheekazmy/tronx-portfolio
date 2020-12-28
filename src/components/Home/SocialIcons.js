@@ -11,27 +11,27 @@ const SocialIcons = (props) => {
     <Grid container spacing={1}>
       <Grid item xs={1}>
         <Avatar>
-          <FacebookIcon fontSize="large" color={"primary"} />
+          <FacebookIcon fontSize="large" color={"secondary"} />
         </Avatar>
       </Grid>
       <Grid item xs={1}>
         <Avatar>
-          <InstagramIcon fontSize="large" color={"primary"} />
+          <InstagramIcon fontSize="large" color={"secondary"} />
         </Avatar>
       </Grid>
       <Grid item xs={1}>
         <Avatar>
-          <TwitterIcon fontSize="large" color={"primary"} />
+          <TwitterIcon fontSize="large" color={"secondary"} />
         </Avatar>
       </Grid>
       <Grid item xs={1}>
         <Avatar>
-          <LinkedInIcon fontSize="large" color={"primary"} />
+          <LinkedInIcon fontSize="large" color={"secondary"} />
         </Avatar>
       </Grid>
       <Grid item xs={1}>
         <Avatar>
-          <GitHubIcon fontSize="large" color={"primary"} />
+          <GitHubIcon fontSize="large" color={"secondary"} />
         </Avatar>
       </Grid>
     </Grid>
