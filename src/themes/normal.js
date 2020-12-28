@@ -25,6 +25,7 @@ const theme = createMuiTheme({
       contrastText: '#222222',
     },
   },
+  backgroundImage: `url(${"/bg-light-01.png"})`
 })
 
 export default theme

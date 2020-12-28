@@ -5,10 +5,6 @@
   height: 85vh;
 }
 
-.swiper-slide {
-  padding-left: 15%;
-}
-
 .parallax-bg {
   background-image: url("images/background.jpg");
 }

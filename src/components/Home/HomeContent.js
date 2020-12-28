@@ -60,39 +60,35 @@ const HomeContent = () => {
           </div>
         </Grid>
       </Grid>
-      <Grid container spacing={1}>
-        <Grid item lg={3} sm={12} xl={3} xs={12}>
-          {/* <img
-              src={
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqnePyQ74Es_GIewC2v2Q-mY3oiBjJ8c1xPg&usqp=CAU"
-              }
-            /> */}
+      <Grid container spacing={10}>
+        <Grid item lg={4} sm={12} xl={4} xs={12}>
           <CardMedia
             image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqnePyQ74Es_GIewC2v2Q-mY3oiBjJ8c1xPg&usqp=CAU"
             title="Paella dish"
             style={{ height: 500, width: 350 }}
           />
         </Grid>
-        <Grid item lg={9} sm={12} xl={9} xs={12}>
-          <Grid container spacing={3}>
-            <GridItemWithSwiper xs={6} swiperParallax="-100">
+        <Grid item lg={8} sm={12} xl={8} xs={12}>
+          <Grid container spacing={6}>
+            <Grid item xs={12}></Grid>
+            <GridItemWithSwiper xs={9} swiperParallax="-100">
               <Typography align="justify" display="block" variant="subtitle1">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.Aliquam
                 dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
                 laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
                 Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                Suspendisse in sem justo. Integer laoreet magna nec elit suscipit
               </Typography>
             </GridItemWithSwiper>
-            <Grid item xs={6}></Grid>
-            <GridItemWithSwiper xs={6} swiperParallax="-300">
+            <GridItemWithSwiper xs={12} swiperParallax="-300">
               <SocialIcons />
             </GridItemWithSwiper>
             <Grid item xs={12}>
-              <Grid container>
-                <GridItemWithSwiper xs={2} swiperParallax="-500">
+              <Grid container spacing={1}>
+                <GridItemWithSwiper xs={3} swiperParallax="-500">
                   <OutlinedButtons color="primary" label="CHECKOUT MY RESUME" />
                 </GridItemWithSwiper>
-                <GridItemWithSwiper xs={2} swiperParallax="-500">
+                <GridItemWithSwiper xs={3} swiperParallax="-500">
                   <OutlinedButtons color="primary" label="CONTACT ME" />
                 </GridItemWithSwiper>
               </Grid>

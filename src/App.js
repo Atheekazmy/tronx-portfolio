@@ -6,14 +6,17 @@ import SwitchUI from '@material-ui/core/Switch'
 import { VerticalSlider } from './components/verticalslider'
 import { CustomThemeContext } from './themes/customThemeProvider'
 import { NavigationMenu } from './components/navigationMenu'
+import { Grid } from '@material-ui/core'
 
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    position: 'relative'
+    position: 'relative',
+    background: theme.backgroundImage,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'auto',
   },
-
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
@@ -26,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
     top: '2%',
     right: '5%'
   },
+  container: {
+    height: 'calc(100% - 65px);'
+  }
 
 }))
 
@@ -57,8 +63,14 @@ export default function App() {
       />
       <main className={classes.content}>
         <Toolbar />
-        <NavigationMenu onChange={onSliderChange} />
-        <VerticalSlider classes={classes} ref={swiperRef} />
+        <Grid container className={classes.container}>
+          <Grid item lg={2} sm={2} xl={2} xs={2} >
+            <NavigationMenu onChange={onSliderChange} />
+          </Grid>
+          <Grid item lg={10} sm={10} xl={10} xs={10} >
+            <VerticalSlider classes={classes} ref={swiperRef} />
+          </Grid>
+        </Grid>
       </main>
     </div>
   )

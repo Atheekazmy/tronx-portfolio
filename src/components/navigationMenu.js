@@ -6,12 +6,10 @@ import { Typography } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
     container: {
         fontFamily: 'Raleway',
-        padding: '1em 1em',
+        padding: '10em 1em',
         display: 'flex',
         flexDirection: 'column',
         width: '200px',
-        zIndex: 2,
-        position: 'fixed'
     },
     borderXwidth: {
         '& a': {

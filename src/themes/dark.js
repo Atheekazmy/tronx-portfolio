@@ -29,6 +29,7 @@ const theme = createMuiTheme({
       main: red.A400,
     },
   },
+  backgroundImage: `url(${"/bg-dark-01.png"})`
 })
 
 export default theme
