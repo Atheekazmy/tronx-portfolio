@@ -50,7 +50,7 @@ const HomeContent = () => {
     <Fragment>
       <Grid container spacing={1}>
         <Grid item lg={12} sm={12} xl={12} xs={12} >
-          <div style={{ position: 'relative', height: '120px' }}>
+          <div style={{ position: 'relative', height: '120px' }} data-swiper-parallax='-800'>
             <Typography variant="h3" className={classes.headerBg} gutterBottom>
               Hi! I'm Nigga
             </Typography>
@@ -75,14 +75,15 @@ const HomeContent = () => {
         </Grid>
         <Grid item lg={9} sm={12} xl={9} xs={12}>
           <Grid container spacing={3}>
-            <GridItemWithSwiper xs={12} swiperParallax="-100">
-              <p>
+            <GridItemWithSwiper xs={6} swiperParallax="-100">
+              <Typography align="justify" display="block" variant="subtitle1">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.Aliquam
                 dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
                 laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
                 Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-            </p>
+              </Typography>
             </GridItemWithSwiper>
+            <Grid item xs={6}></Grid>
             <GridItemWithSwiper xs={6} swiperParallax="-300">
               <SocialIcons />
             </GridItemWithSwiper>
