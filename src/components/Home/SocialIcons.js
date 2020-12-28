@@ -21,19 +21,19 @@ const SocialIcons = (props) => {
   const classes = useStyles();
   return (
     <span className={classes.root}>
-      <Avatar >
+      <Avatar data-swiper-parallax="-100">
         <FacebookIcon fontSize="medium" color={"primary"} />
       </Avatar>
-      <Avatar >
+      <Avatar data-swiper-parallax="-200">
         <InstagramIcon fontSize="medium" color={"primary"} />
       </Avatar>
-      <Avatar >
+      <Avatar data-swiper-parallax="-300">
         <TwitterIcon fontSize="medium" color={"primary"} />
       </Avatar>
-      <Avatar >
+      <Avatar data-swiper-parallax="-400">
         <LinkedInIcon fontSize="medium" color={"primary"} />
       </Avatar>
-      <Avatar >
+      <Avatar data-swiper-parallax="-500">
         <GitHubIcon fontSize="medium" color={"primary"} />
       </Avatar>
     </span>
