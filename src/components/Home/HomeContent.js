@@ -52,10 +52,10 @@ const HomeContent = () => {
         <Grid item lg={12} sm={12} xl={12} xs={12} >
           <div style={{ position: 'relative', height: '120px' }} data-swiper-parallax='-800'>
             <Typography variant="h3" className={classes.headerBg} gutterBottom>
-              Hi! I'm Nigga
+              Hi! I'm John
             </Typography>
             <Typography variant="h6" className={classes.title} gutterBottom>
-              Hi! I'm Nigga
+              Hi! I'm John
             </Typography>
           </div>
         </Grid>

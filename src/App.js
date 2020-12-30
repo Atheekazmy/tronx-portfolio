@@ -7,20 +7,17 @@ import { VerticalSlider } from './components/verticalslider'
 import { CustomThemeContext } from './themes/customThemeProvider'
 import { NavigationMenu } from './components/navigationMenu'
 import { Grid } from '@material-ui/core'
-
+import { useWidth } from './utils/hooks/useScreenSize'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
-    position: 'relative',
     background: theme.backgroundImage,
     backgroundRepeat: 'no-repeat',
-    backgroundSize: 'auto',
+    backgroundSize: 'cover',
   },
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
-    height: '100vh',
     width: '100%'
   },
   themeSwitch: {
@@ -41,7 +38,7 @@ export default function App() {
 
   const { currentTheme, setTheme } = useContext(CustomThemeContext)
   const isDark = Boolean(currentTheme === 'dark')
-
+  const width = useWidth();
   const handleThemeChange = (event) => {
     const { checked } = event.target
     if (checked) {
@@ -54,15 +51,17 @@ export default function App() {
   const onSliderChange = (index) => {
     swiperRef.current && swiperRef.current.changeSlider(index);
   }
+  console.log('width', width);
 
   return (
     <div className={classes.root}>
-      <FormControlLabel className={classes.themeSwitch}
-        control={<SwitchUI checked={isDark} onChange={handleThemeChange} />}
-        label="Theme"
-      />
+      <Toolbar>
+        <FormControlLabel className={classes.themeSwitch}
+          control={<SwitchUI checked={isDark} onChange={handleThemeChange} />}
+          label="Theme"
+        />
+      </Toolbar>
       <main className={classes.content}>
-        <Toolbar />
         <Grid container className={classes.container}>
           <Grid item lg={2} sm={2} xl={2} xs={2} >
             <NavigationMenu onChange={onSliderChange} />
