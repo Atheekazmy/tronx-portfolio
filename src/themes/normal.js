@@ -22,7 +22,7 @@ const theme = createMuiTheme({
     },
     titleBar: {
       main: 'rgba(0, 0, 0, 0.07)',
-      contrastText: '#222222',
+      contrastText: '#111111',
     },
   },
   backgroundImage: `url(${"/bg-light-01.png"})`
