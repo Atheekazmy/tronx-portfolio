@@ -1,66 +1,9 @@
-import { makeStyles, Typography } from '@material-ui/core';
-import React, { useRef } from 'react';
+
+import React, { forwardRef, useImperativeHandle, useRef } from 'react';
 import Swiper from 'react-id-swiper';
 import HomeContent from './Home/HomeContent';
 
-const useStyles = makeStyles((theme) => ({
-    container: {
-        fontFamily: 'Raleway',
-        padding: '1em 1em',
-        display: 'flex',
-        flexDirection: 'column',
-        width: '200px',
-        zIndex: 2,
-        position: 'fixed'
-    },
-    borderXwidth: {
-        '& a': {
-            textDecoration: 'none',
-            font: '20px Raleway',
-            margin: '0px 10px',
-            padding: '10px 10px',
-            position: 'relative',
-            zIndex: 0,
-            cursor: 'pointer',
-            "&:before": {
-                position: 'absolute',
-                opacity: 0,
-                width: '0%',
-                height: 2,
-                content: '""',
-                background: theme.palette.secondary.main,
-                transition: 'all 0.3s',
-                left: '0px',
-                top: '0px',
-            },
-            "&:after": {
-                position: 'absolute',
-                opacity: 0,
-                width: '0%',
-                height: 2,
-                content: '""',
-                background: theme.palette.secondary.main,
-                transition: 'all 0.3s',
-                right: '0px',
-                bottom: '0px',
-            },
-            '&:hover': {
-                "&:before": {
-                    opacity: 1,
-                    width: '100%',
-                },
-                "&:after": {
-                    opacity: 1,
-                    width: '100%',
-                }
-            },
-        }
-    },
-}))
-
-export const VerticalSlider = () => {
-    const classes = useStyles()
-    const menuName = ['Home', 'Services', 'Resume', 'Projects', 'Blogs', 'Contact'];
+export const VerticalSlider = forwardRef((props, ref) => {
     const swiperRef = useRef();
 
     const params = {
@@ -81,18 +24,20 @@ export const VerticalSlider = () => {
         }
     }
 
+    useImperativeHandle(ref, () => ({
+        changeSlider: changeSlider
+    }));
+
+
     return (
         <div >
-            <div className={`${classes.container} ${classes.borderXwidth}`}>
-                {menuName.map((x, i) => <a onClick={() => changeSlider(i)}><Typography >{x}</Typography></a>)}
-            </div>
 
-            <Swiper {...params} className={classes.swiper} ref={swiperRef} >
+            <Swiper {...params} ref={swiperRef} >
                 <div >
-                <HomeContent />
+                    <HomeContent />
                 </div>
                 <div styles={{ marginLeft: '30%' }}>
-                <HomeContent />
+                    <HomeContent />
                 </div>
                 <div >
                     <div data-swiper-parallax="-300">
@@ -161,4 +106,5 @@ export const VerticalSlider = () => {
             </Swiper >
         </div >
     )
-};
+});
+

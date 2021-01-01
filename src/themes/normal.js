@@ -5,8 +5,11 @@ import { red } from '@material-ui/core/colors'
 // A custom theme for this app
 const theme = createMuiTheme({
   palette: {
+    background: {
+      default: '#ffffff'
+    },
     primary: {
-      main: '#556cd6',
+      main: '#007bff',
     },
     secondary: {
       main: '#cc4444',
@@ -18,10 +21,11 @@ const theme = createMuiTheme({
       default: '#f5f5f5',
     },
     titleBar: {
-      main: '#eeeeee',
-      contrastText: '#222222',
+      main: 'rgba(0, 0, 0, 0.07)',
+      contrastText: '#111111',
     },
   },
+  backgroundImage: `url(${"/bg-light-01.png"})`
 })
 
 export default theme
